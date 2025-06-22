@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from '../styles/hero.module.css'
 import heroRightImg from '../assets/Hero/hero-right.svg'
+import heroLogo from '../assets/Hero/logo.svg'
 import Navigation from './Navigation'
 
 const navLinks = ['I', 'Benefits', 'Recent work', 'Scope of work', 'Pricing', 'FAQs', 'Login'];
@@ -22,7 +23,7 @@ const Hero = () => {
     <div className={styles.indexContainer}>
       {/* Top Branding */}
       <div className={styles.branding}>
-        <h1>DesignJoy</h1>
+        <img src={heroLogo} alt="DesignJoy logo" className={styles.logo}/>
         {/* Hamburger menu for mobile */}
         {isMobile && (
           <button
@@ -43,7 +44,7 @@ const Hero = () => {
 
       {/* Right side orange circular element */}
       <div className={styles.orangeCircle}>
-       <img src={heroRightImg} alt="Hero right decoration" />
+        <img src={heroRightImg} alt="Hero right decoration" />
       </div>
 
       {/* Main Content */}
@@ -51,15 +52,15 @@ const Hero = () => {
         <h1 className={styles.mainTitle}>
           A design agency with a twist
         </h1>
-        
+
         <p className={styles.mainSubtitle}>
           Design subscriptions to scale your business.
         </p>
-        
+
         <button className={styles.ctaButton}>
           See plans
         </button>
-        
+
         <p className={styles.guaranteeText}>
           Designs you'll, guaranteed
         </p>
@@ -68,7 +69,7 @@ const Hero = () => {
       {/* Desktop Navigation (only show on desktop) */}
       {!isMobile && (
         <div className={styles.desktopNavOnly}>
-          {/* <Navigation /> */}
+          <Navigation />
         </div>
       )}
 

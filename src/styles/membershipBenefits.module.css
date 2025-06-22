@@ -1,0 +1,213 @@
+.benefitsSection {
+    background: rgb(238, 237, 237);
+    position: relative;
+    padding: 0 0 4rem 0;
+    min-height: 100vh;
+    overflow: hidden;
+    padding-top: 9rem;
+    overflow: visible;
+}
+
+.decorTopLeft {
+    position: absolute;
+    top: -9rem;
+    left: 0;
+    width: 180px;
+    /* height: 180px; */
+    z-index: 1;
+}
+
+.decorTopRight {
+    position: absolute;
+    top: -7.5rem;
+    right: 0;
+    width: 160px;
+    /* height: 180px; */
+    z-index: 1;
+}
+
+.decorCenter {
+    position: absolute;
+    top: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    /* width: 80px;
+    height: 60px; */
+    z-index: 2;
+}
+
+.sparkle {
+    position: absolute;
+    top: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    z-index: 3;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.heading {
+    font-family: var(--font-heading);
+    font-size: 3.1rem;
+    font-weight: 700;
+    color: #111;
+    margin-top: 2.5rem;
+    /* margin-bottom: 1.2rem; */
+    letter-spacing: -1px;
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subtitle {
+    font-size:25px;
+    color: #000000;
+    margin-bottom: 2.5rem;
+    line-height: 22px;
+    max-width: 600px;
+    /* font-weight: 500; */
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.ctaButton {
+    background: #000;
+    color: #fff;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 12px;
+    padding: 1em 2.5em;
+    box-shadow: 6px 6px 0 #cfc2b8;
+    cursor: pointer;
+    margin-bottom: 3.5rem;
+    margin-top: 0.5rem;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.ctaButton:hover {
+    box-shadow: 6px 6px 0 #b3a393;
+    transform: translateY(-6px);
+}
+
+.benefitsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8rem;
+    margin-top: 2.5rem;
+}
+
+.benefitItem {
+    flex: 1 1 260px;
+    max-width: 320px;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon {
+    margin-bottom: 1.2rem;
+}
+
+.benefitTitle {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.benefitDesc {
+    font-size: 20px;
+    color: #222;
+    line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+        .benefitsGrid {
+            gap: 2rem;
+        }
+
+    .heading {
+        /* font-size: 2.5rem; */
+    }
+
+    .subtitle {
+        /* font-size: 1.1rem; */
+    }
+}
+
+@media (max-width: 768px) {
+    .benefitsSection {
+        padding-bottom: 2rem;
+    }
+
+    .heading {
+        font-size: 35px;
+        margin-top: 1.5rem;
+        padding: 1rem;
+        line-height: 45px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        margin-bottom: 1.5rem;
+        padding: 0 1rem;
+        line-height: 22px;
+    }
+
+    .benefitsGrid {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .benefitItem {
+        max-width: 100%;
+        padding: 0 2rem ;
+        flex: unset;
+
+    }
+    .benefitDesc {
+        font-size: 20px;
+        color: #0e0000;
+        line-height: 26px;
+        padding: 0 1rem;
+    }
+
+    .decorTopLeft {
+        width: 80px;
+        top: -4rem;
+    }
+
+    .decorTopRight {
+        width: 60px;
+        top: -3rem;
+    }
+
+    .decorCenter {
+        width: 10px;
+        top: -3.5rem;
+    }
+
+    .sparkle {
+        width: 90px;
+        top: 5rem;
+    }
+}
