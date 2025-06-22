@@ -1,0 +1,44 @@
+.latestProjects {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1%;
+    background-color: #f7e6dc;
+    overflow-x: hidden;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    position: relative;
+}
+
+.latestProjects .badge{
+    position: absolute;
+    top: 0;
+    left: 11rem;
+    width: 170px;
+    z-index: 2;
+}
+
+.latestProjects .lpImg {
+    width: 25%;
+    transition: .5s;
+    
+}
+
+.latestProjects .lpImg:hover {
+    scale: 1.1;
+}
+
+
+@media (max-width: 768px) {
+    .latestProjects{
+        padding-top: 5rem;
+    }
+    .latestProjects .lpImg {
+        width: 60%;
+    }
+    .latestProjects .badge{
+        width: 90px;
+        left: 30px;
+        top: 30px;
+    }
+
+}
