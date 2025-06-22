@@ -1,0 +1,110 @@
+.navigationContainer {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+  }
+  
+  .navigation {
+    background-color: black;
+    border-radius: 9999px;
+    padding: .75em 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  .navList {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: .5rem;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    color: #fff;
+  }
+  
+  .navItem {
+    margin: 0;
+  }
+  
+  .navItem:first-child .navButton {
+    background-color: rgba(255, 255, 255, 0.314);
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    border: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .navItem:first-child .navButton.active {
+    background-color: rgba(255, 255, 255, 0.314);
+    color: rgb(255, 255, 255);
+  }
+  
+  .navItem:last-child .navButton {
+    background-color:rgba(255, 255, 255, 0.314);
+    color: white;
+    font-weight: 700;
+    padding: 1rem 1.3rem;
+  }
+  
+  .navItem:last-child .navButton.active {
+    background-color: rgba(255, 255, 255, 0.314);
+    color: white;
+  }
+  
+  .navButton {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 800;
+    transition: all 0.2s;
+    padding: 1rem 1.3rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    background: none;
+  }
+  
+  .active {
+    background-color: white;
+    color: black;
+  }
+  
+  .inactive {
+    color: #D1D5DB;
+  }
+  
+  .inactive:hover {
+    color: white;
+    background-color: #1F2937;
+  }
+
+.mobileNav {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  z-index: 1002;
+}
+
+.mobileNavList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobileNavList .navButton {
+  font-size: 2rem;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  width: 100%;
+  max-width: 320px;
+}
