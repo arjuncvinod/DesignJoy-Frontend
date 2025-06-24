@@ -69,7 +69,7 @@ const Hero = () => {
       {/* Desktop Navigation (only show on desktop) */}
       {!isMobile && (
         <div className={styles.desktopNavOnly}>
-          <Navigation />
+          {/* <Navigation /> */}
         </div>
       )}
 

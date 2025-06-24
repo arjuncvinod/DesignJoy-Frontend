@@ -6,6 +6,9 @@ import FeatureBanner from './components/FeatureBanner'
 import TestimonialBanner from './components/TestimonialBanner'
 import HowWeWork from './components/HowWeWork'
 import MembershipBenefits from './components/MembershipBenefits'
+import ServicesSection from './components/ServicesSection'
+import FAQSection from './components/FAQSection'
+import Footer from './components/Footer'
 const App = () => {
   return (
     <div>
@@ -15,7 +18,10 @@ const App = () => {
       <FeatureBanner />
       <TestimonialBanner />
       <HowWeWork />
-    <MembershipBenefits />
+      <MembershipBenefits />
+      <ServicesSection />
+      <FAQSection />
+      <Footer />
     </div>
   )
 }

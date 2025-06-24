@@ -3,6 +3,7 @@
 :root {
   --font-heading: 'Montserrat', sans-serif;
   --font-subheading: Arial, sans-serif;
+  --font-cta: 'Exo', Arial, sans-serif;
 }
 
 * {
@@ -16,7 +17,12 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
 }

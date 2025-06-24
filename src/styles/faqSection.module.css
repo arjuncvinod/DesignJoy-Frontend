@@ -1,0 +1,119 @@
+.section {
+    width: 100%;
+    background: #f6f6f6;
+    padding: 80px 1rem 60px 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    font-size: 3rem;
+    font-family: var(--font-heading, 'Inter', Arial, sans-serif);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #222;
+}
+
+.faqList {
+    width: 100%;
+    max-width: 940px;
+    background: none;
+}
+
+.faqItem {
+    margin-bottom: 0.5rem;
+    transition: 1s;
+
+}
+
+.question {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-family: var(--font-heading, 'Inter', Arial, sans-serif);
+    font-weight: 700;
+    text-align: left;
+    padding: 2.3rem 2rem;
+    padding-bottom: .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #222;
+    transition: color 0.2s;
+    margin-bottom: 1rem;
+}
+
+.question:focus {
+    outline: none;
+}
+
+.question:focus-visible {
+    outline: 2px solid #0047ff;
+    outline-offset: 2px;
+}
+
+.open {
+    color: #0047ff;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    color: #888;
+    transition: transform 0.2s;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+}
+
+.answer {
+    font-size: 17px;
+    color: #222;
+    padding: 0 2rem;
+    padding-right: 3rem;
+    line-height: 27px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s;
+}
+
+.answerOpen {
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s;
+    animation: faqOpenAnim 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes faqOpenAnim {
+    0% {
+        opacity: 0;
+        transform: translateY(-16px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.answerClosed {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.25s, opacity 0.15s;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #000000;
+    margin: 0;
+    transition: .5s;
+}

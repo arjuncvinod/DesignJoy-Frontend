@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap');
+
+.footer {
+    background: #000;
+    color: #fff;
+    /* padding: 0 0 2.5rem 0; */
+    width: 100%;
+    font-family: 'Inter', Arial, sans-serif;
+    margin-top: 5rem;
+    padding: 4rem 0;
+}
+
+.footer__top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0 2.5rem 0;
+}
+
+.footer__clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    margin-bottom: 8rem;
+}
+
+.footer__client_logo {
+    height: 30px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 1;
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3.5rem 2rem 0 2rem;
+    flex-wrap: wrap;
+}
+
+.footer__brand_location {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    min-width: 320px;
+}
+
+.footer__brand {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.footer__logo {
+    height: 2.5rem;
+    width: auto;
+}
+
+.footer__brand_name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.footer__location {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.1rem;
+    color: #fff;
+    opacity: 0.85;
+}
+
+.footer__location_icon {
+    height: 1.3rem;
+    width: 1.3rem;
+    filter: brightness(0) invert(1);
+}
+
+.footer__links {
+    display: flex;
+    gap: 4rem;
+    min-width: 320px;
+}
+
+.footer__links_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.footer__links_list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0.95;
+    transition: opacity 0.2s, text-decoration 0.2s;
+}
+
+.footer__links_list a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer__cta_section {
+    width: 100%;
+    text-align: center;
+    padding: 4rem 0 2.5rem 0;
+    background: #000;
+}
+
+.footer__cta_heading {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-family: var(--font-heading, 'Inter', Arial, sans-serif);
+    max-width: 750px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 60px;
+}
+
+.footer__cta_subheading {
+    font-size: 24px;
+    color: #fff;
+    opacity: 0.95;
+    font-family: var(--font-base, 'Inter', Arial, sans-serif);
+    max-width: 800px;
+    line-height: 36px;
+    margin: 0 auto;
+    margin-top: .5rem;
+    margin-bottom: 4.5rem;
+}
+
+.footer__cta_button {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 2rem 0;
+    width: 800px;
+    height: 142px;
+    max-width: 800px;
+    min-width: 300px;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    /* box-shadow: 8px 8px 0 #cfc2b8; */
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.5s;
+    transform: translateY(0);
+    font-family: Exo, Arial;
+    outline: none;
+}
+
+.footer__cta_button:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 7px 9px #5748487a;
+    transform: translateY(-10px);
+    border: 1px solid #000000;
+
+}
+.footer__cta_button:focus{
+    outline: none;
+}
+
+@media (max-width: 900px) {
+    .footer__bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        padding: 2.5rem 1rem 0 1rem;
+    }
+
+    .footer__brand-location,
+    .footer__links {
+        align-items: center;
+        min-width: unset;
+    }
+
+    .footer__brand-location {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__cta_heading {
+        font-size: 2.2rem;
+    }
+
+    .footer__cta_button {
+        font-size: 1.3rem;
+        padding: 1.2rem 0;
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer__top {
+        padding: 2rem 0 1.5rem 0;
+    }
+
+    .footer__clients {
+        gap: 2rem;
+    }
+
+    .footer__bottom {
+        padding: 1.5rem 0.5rem 0 0.5rem;
+    }
+
+    .footer__links {
+        gap: 2rem;
+    }
+
+    .footer__brand {
+        font-size: 1.5rem;
+    }
+
+    .footer__brand-name {
+        font-size: 1.5rem;
+    }
+
+    .footer__cta_section {
+        padding: 2.5rem 0 1.5rem 0;
+    }
+
+    .footer__cta_heading {
+        font-size: 1.5rem;
+    }
+
+    .footer__cta_subheading {
+        font-size: 1rem;
+    }
+
+    .footer__cta_button {
+        font-size: 1rem;
+        padding: 1rem 0;
+        min-width: 120px;
+        width: 90vw;
+    }
+}
