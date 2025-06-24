@@ -7,6 +7,9 @@ import logo3 from "../assets/Marquee/3.svg"
 import logo4 from "../assets/Marquee/4.svg"
 import logo5 from "../assets/Marquee/5.svg"
 
+import footerImg from "../assets/Footer/footer-img.svg"
+import logo from "../assets/Hero/logo.svg"
+
 const Footer = () => (
     <footer className={styles.footer}>
         <div className={styles.footer__cta_section}>
@@ -28,11 +31,10 @@ const Footer = () => (
         <div className={styles.footer__bottom}>
             <div className={styles.footer__brand_location}>
                 <div className={styles.footer__brand}>
-                    <img src="/src/assets/Hero/logo.svg" alt="Designjoy Logo" className={styles.footer__logo} />
-                    <span className={styles.footer__brand_name}>Designjoy</span>
+                    <img src={logo} alt="Designjoy Logo" className={styles.footer__logo} />
                 </div>
                 <div className={styles.footer__location}>
-                    <img src="/src/assets/location.svg" alt="Location Icon" className={styles.footer__location_icon} />
+                    <img src={footerImg} alt="Location Icon" className={styles.footer__location_icon} />
                     <span>Designjoy is headquartered in Phoenix, Arizona.</span>
                 </div>
             </div>
