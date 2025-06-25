@@ -82,7 +82,7 @@
     opacity: 0.85;
 }
 
-.footer__location span{
+.footer__location span {
     font-size: 14px;
     width: 200px;
 }
@@ -184,81 +184,130 @@
     border: 1px solid #000000;
 
 }
-.footer__cta_button:focus{
+
+.footer__cta_button:focus {
     outline: none;
 }
 
 @media (max-width: 900px) {
     .footer__bottom {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 2.5rem;
         padding: 2.5rem 1rem 0 1rem;
     }
 
-    .footer__brand-location,
-    .footer__links {
-        align-items: center;
-        min-width: unset;
+    .footer__brand_location {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 1.5rem;
     }
 
-    .footer__brand-location {
-        align-items: center;
-        text-align: center;
+    .footer__links {
+        align-items: flex-start;
+        min-width: unset;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .footer__location {
+        flex-direction: row;
+        text-align: left;
+        width: 100%;
+    }
+
+    .footer__location span {
+        width: auto;
+        text-align: left;
     }
 
     .footer__cta_heading {
-        font-size: 2.2rem;
+        font-size: 36px;
+        line-height: 44px;
+        padding: 0 1rem;
+    }
+
+    .footer__cta_subheading {
+        font-size: 20px;
+        line-height: 30px;
+        padding: 0 1rem;
     }
 
     .footer__cta_button {
-        font-size: 1.3rem;
-        padding: 1.2rem 0;
-        min-width: 180px;
+        font-size: 24px;
+        padding: 1.5rem 0;
+        width: 90%;
+        height: auto;
+    }
+
+    .footer__clients {
+        gap: 2.5rem;
+        padding: 0 1rem;
+    }
+
+    .footer__client_logo {
+        height: 25px;
     }
 }
 
 @media (max-width: 600px) {
+    .footer {
+        padding: 2rem 0;
+    }
+
     .footer__top {
-        padding: 2rem 0 1.5rem 0;
+        padding: 1.5rem 0;
     }
 
     .footer__clients {
         gap: 2rem;
+        margin-bottom: 4rem;
     }
 
-    .footer__bottom {
-        padding: 1.5rem 0.5rem 0 0.5rem;
+    .footer__client_logo {
+        height: 20px;
     }
 
     .footer__links {
         gap: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 1rem;
     }
 
-    .footer__brand {
-        font-size: 1.5rem;
-    }
-
-    .footer__brand-name {
-        font-size: 1.5rem;
+    .footer__links_list {
+        align-items: flex-start;
+        text-align: left;
     }
 
     .footer__cta_section {
-        padding: 2.5rem 0 1.5rem 0;
+        padding: 2rem 0;
     }
 
     .footer__cta_heading {
-        font-size: 1.5rem;
+        font-size: 28px;
+        line-height: 36px;
     }
 
     .footer__cta_subheading {
-        font-size: 1rem;
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 3rem;
     }
 
     .footer__cta_button {
-        font-size: 1rem;
-        padding: 1rem 0;
-        min-width: 120px;
-        width: 90vw;
+        font-size: 20px;
+        padding: 1.2rem 0;
+        height: auto;
+    }
+
+    .footer__brand_location {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .footer__location span {
+        font-size: 14px;
     }
 }
