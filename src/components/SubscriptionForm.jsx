@@ -14,7 +14,6 @@ const SubscriptionForm = ({ isOpen, onClose }) => {
         emirate: ''
     });
 
-    // Close the modal when Escape key is pressed
     useEffect(() => {
         const handleEscapeKey = (e) => {
             if (e.key === 'Escape' && isOpen) {
@@ -24,7 +23,6 @@ const SubscriptionForm = ({ isOpen, onClose }) => {
 
         document.addEventListener('keydown', handleEscapeKey);
 
-        // Prevent scrolling of the body when modal is open
         if (isOpen) {
             document.body.style.overflow = 'hidden';
         } else {
@@ -37,7 +35,6 @@ const SubscriptionForm = ({ isOpen, onClose }) => {
         };
     }, [isOpen, onClose]);
 
-    // If modal is not open, don't render anything
     if (!isOpen) return null;
 
     const handleChange = (e) => {
@@ -47,7 +44,7 @@ const SubscriptionForm = ({ isOpen, onClose }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you would handle the form submission, such as sending the data to an API
+
         console.log('Form submitted:', formData);
         alert('Form submitted successfully!');
         onClose();
@@ -56,7 +53,6 @@ const SubscriptionForm = ({ isOpen, onClose }) => {
     const handlePhoneChange = (e) => {
         const { name, value } = e.target;
 
-        // Ensure phone numbers always start with +971
         if (value.startsWith('+971')) {
             setFormData({ ...formData, [name]: value });
         } else if (value === '+97') {
@@ -64,7 +60,6 @@ const SubscriptionForm = ({ isOpen, onClose }) => {
         } else if (value === '+9' || value === '+' || value === '') {
             setFormData({ ...formData, [name]: '+971' });
         } else {
-            // If someone pastes a number without the prefix, add it
             if (!value.startsWith('+')) {
                 setFormData({ ...formData, [name]: '+971' + value.replace(/\D/g, '') });
             } else {
@@ -73,7 +68,6 @@ const SubscriptionForm = ({ isOpen, onClose }) => {
         }
     };
 
-    // Close when clicking the overlay (the area around the modal)
     const handleOverlayClick = (e) => {
         if (e.target === e.currentTarget) {
             onClose();

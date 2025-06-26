@@ -24,10 +24,8 @@ const Hero = () => {
 
   return (
     <div className={styles.indexContainer} id='hero'>
-      {/* Top Branding */}
       <div className={styles.branding}>
         <img src={heroLogo} alt="DesignJoy logo" className={styles.logo} />
-        {/* Hamburger menu for mobile */}
         {isMobile && (
           <button
             className={styles.hamburger}
@@ -39,18 +37,14 @@ const Hero = () => {
         )}
       </div>
 
-      {/* Abstract Shapes */}
-      {/* Left yellow organic shapes */}
       <div className={styles.yellowShapes}>
         <img src="https://cdn.prod.website-files.com/65869146639e0c4c1b094ebb/65869146639e0c4c1b094ebf_6484ceb82495841656250535_61195ef16ada8678daf3f267_Group%2045.svg" alt="" />
       </div>
 
-      {/* Right side orange circular element */}
       <div className={styles.orangeCircle}>
         <img src={heroRightImg} alt="Hero right decoration" />
       </div>
 
-      {/* Main Content */}
       <div className={styles.mainContent} >
         <h1 className={styles.mainTitle}>
           A design agency with a twist
@@ -69,17 +63,14 @@ const Hero = () => {
         </p>
       </div>
 
-      {/* Subscription Form Modal */}
       <SubscriptionForm isOpen={isModalOpen} onClose={handleCloseModal} />
 
-      {/* Desktop Navigation (only show on desktop) */}
       {!isMobile && (
         <div className={styles.desktopNavOnly}>
           <Navigation />
         </div>
       )}
 
-      {/* Mobile Navigation Bar */}
       {isMobile && (
         <Navigation
           isMobile={true}

@@ -54,7 +54,6 @@
 .carouselContainer::before,
 .carouselContainer::after {
     content: none;
-    /* Removed the fading effect */
     position: absolute;
     top: 0;
     bottom: 0;
@@ -64,8 +63,7 @@
 }
 
 .navButton {
-    /* background: #ffffff; */
-    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+
     border-radius: 8px;
     width: 50px;
     height: 50px;
@@ -74,7 +72,6 @@
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
     z-index: 10;
     flex-shrink: 0;
     color: #333;
@@ -103,28 +100,21 @@
     scroll-behavior: smooth;
     padding: 0 120px;
     scrollbar-width: none;
-    /* Firefox */
     -ms-overflow-style: none;
-    /* Internet Explorer 10+ */
     padding-top: 2rem;
     padding-bottom: 1.5rem;
     -webkit-overflow-scrolling: touch;
-    /* Smooth scrolling on iOS */
     scroll-snap-type: x mandatory;
-    /* Enable scroll snapping */
 }
 
 .cards::-webkit-scrollbar {
     display: none;
-    /* WebKit */
 }
 
 .serviceCard {
     scroll-snap-align: center;
-    /* Center the card when scrolling */
 }
 
-/* Interactive Service Card */
 .serviceCard {
     position: relative;
     background: #ffffff;
@@ -133,13 +123,11 @@
     max-width: 381px;
     flex: 0 0 381px;
     height: 520px;
-    /* Set explicit height for the card */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(0, 0, 0, 0.06);
-    /* padding-bottom: 1rem; */
     background-size: cover;
     background-position: center;
 }
@@ -150,12 +138,10 @@
     border-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Idle Content (Default State) */
 .idleContent {
     text-align: left;
     transition: opacity 0.3s ease-in-out;
     height: 100%;
-    /* Fill the entire height of the card */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -170,7 +156,6 @@
     pointer-events: none;
 }
 
-/* Hover Content (Detailed State) */
 .hoverContent {
     position: absolute;
     top: 0;
@@ -186,9 +171,7 @@
     background: #f7e6dc;
     color: #2d3748;
     overflow-y: hidden;
-    /* Allow scrolling if content exceeds the height */
     height: 100%;
-    /* Fill the entire height of the card */
 }
 
 .serviceCard:hover .hoverContent {
@@ -196,7 +179,6 @@
     padding-bottom: 2rem;
 }
 
-/* Service Title */
 .serviceTitle {
     font-size: 1.6rem;
     font-family: var(--font-heading);
@@ -219,7 +201,6 @@
     font-size: 1.8rem;
 }
 
-/* Service Description (Hover Only) */
 .serviceDescription {
     font-size: 1.1rem;
     color: #4a5568;
@@ -244,7 +225,6 @@
     font-weight: 500;
 }
 
-/* Included Section (Hover Only) */
 .includedSection::before {
     content: '';
     display: block;
@@ -291,7 +271,6 @@
     font-size: 0.9rem;
 }
 
-/* Service Card Specific Backgrounds */
 .serviceCard:nth-child(1) .idleContent {
     background: url('/path/to/branding-image.jpg') no-repeat center center;
 }
@@ -312,7 +291,6 @@
     background: url('/path/to/print-packaging-image.jpg') no-repeat center center;
 }
 
-/* Add mountain silhouettes for landscape effect */
 .serviceCard .idleContent::before {
     background:
         radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.4) 12%, transparent 12%),
@@ -322,7 +300,6 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Enhanced gradient overlay for text readability */
 .idleContent::after {
     content: '';
     position: absolute;
@@ -342,8 +319,6 @@
     .carouselContainer {
         gap: 16px;
     }
-
-    /* Fading effects removed */
 
     .navButton {
         width: 45px;
@@ -380,20 +355,19 @@
     }
 
     .cards {
-        padding: 0 60px;
+        padding: 0 50px;
         gap: 24px;
         padding-top: 1.5rem;
         padding-bottom: 1rem;
     }
 
     .serviceCard {
-        flex: 0 0 320px;
-        min-width: 320px;
-        max-width: 320px;
+        flex: 0 0 340px;
+        min-width: 340px;
+        max-width: 340px;
         height: 480px;
     }
 
-    /* Using height: 100% from the base rule */
 }
 
 @media (max-width: 600px) {
@@ -414,7 +388,6 @@
         gap: 10px;
     }
 
-    /* Fading effects removed */
 
     .navButton {
         width: 38px;
@@ -428,19 +401,18 @@
     }
 
     .cards {
-        padding: 0 35px;
+        padding: 0 30px;
         gap: 18px;
     }
 
     .serviceCard {
         border-radius: 16px;
-        flex: 0 0 280px;
-        min-width: 280px;
-        max-width: 280px;
+        flex: 0 0 310px;
+        min-width: 310px;
+        max-width: 310px;
         height: 450px;
     }
 
-    /* Using height: 100% from the base rule */
 
     .hoverContent {
         padding: 24px 20px 20px 20px;
@@ -517,19 +489,18 @@
     }
 
     .cards {
-        padding: 0 25px;
+        padding: 0 20px;
         gap: 15px;
     }
 
     .serviceCard {
-        flex: 0 0 250px;
-        min-width: 250px;
-        max-width: 250px;
+        flex: 0 0 280px;
+        min-width: 280px;
+        max-width: 280px;
         border-radius: 14px;
         height: 420px;
     }
 
-    /* Using height: 100% from the base rule */
 
     .hoverContent {
         padding: 18px 16px 16px 16px;
@@ -574,7 +545,6 @@
 
 @media (hover: none) {
 
-    /* For touch devices */
     .serviceCard:active .idleContent {
         opacity: 0;
         pointer-events: none;
@@ -584,7 +554,6 @@
         opacity: 1;
     }
 
-    /* Make tap targets larger on mobile */
     .navButton {
         min-width: 44px;
         min-height: 44px;

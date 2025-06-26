@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from '../styles/testimonialBanner.module.css';
 
-// Placeholder decorative images (replace with your own if needed)
 import decoLeft from '../assets/Testimonial/left.svg';
 import decoRight from '../assets/Testimonial/right.svg';
 import quoteImg from '../assets/Testimonial/quote.png';

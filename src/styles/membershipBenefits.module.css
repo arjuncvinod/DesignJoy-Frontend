@@ -13,7 +13,6 @@
     top: -9rem;
     left: 0;
     width: 180px;
-    /* height: 180px; */
     z-index: 1;
 }
 
@@ -22,7 +21,6 @@
     top: -7.5rem;
     right: 0;
     width: 160px;
-    /* height: 180px; */
     z-index: 1;
 }
 
@@ -31,8 +29,6 @@
     top: -5rem;
     left: 50%;
     transform: translateX(-50%);
-    /* width: 80px;
-    height: 60px; */
     z-index: 2;
 }
 
@@ -61,7 +57,6 @@
     font-weight: 700;
     color: #111;
     margin-top: 2.5rem;
-    /* margin-bottom: 1.2rem; */
     letter-spacing: -1px;
     max-width: 600px;
     text-align: center;
@@ -75,7 +70,6 @@
     margin-bottom: 2.5rem;
     line-height: 22px;
     max-width: 600px;
-    /* font-weight: 500; */
     margin-left: auto;
     margin-right: auto;
     font-family: Arial, Helvetica, sans-serif;
@@ -144,14 +138,6 @@
         .benefitsGrid {
             gap: 2rem;
         }
-
-    .heading {
-        /* font-size: 2.5rem; */
-    }
-
-    .subtitle {
-        /* font-size: 1.1rem; */
-    }
 }
 
 @media (max-width: 768px) {

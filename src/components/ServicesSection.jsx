@@ -14,11 +14,7 @@ const ServicesSection = () => {
     const checkArrowVisibility = () => {
         if (carouselRef.current) {
             const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-
-            // Show left arrow if not at the beginning
             setShowLeftArrow(scrollLeft > 0);
-
-            // Show right arrow if not at the end (with small tolerance for floating point)
             setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 1);
         }
     };
@@ -27,7 +23,6 @@ const ServicesSection = () => {
         const carousel = carouselRef.current;
         if (carousel) {
             carousel.addEventListener('scroll', checkArrowVisibility);
-            // Check initial state
             checkArrowVisibility();
 
             return () => {
@@ -153,13 +148,11 @@ const ServicesSection = () => {
                             className={styles.serviceCard}
                             style={{ backgroundImage: `url(${service.bgImage})` }}
                         >
-                            {/* Idle State Content */}
                             <div className={styles.idleContent}>
                                 <h3 className={styles.serviceTitle}>{service.title}</h3>
                                 <p className={styles.serviceDescription}>{service.description}</p>
                             </div>
 
-                            {/* Hover State Content */}
                             <div className={styles.hoverContent}>
                                 <h3 className={styles.serviceTitle}>{service.title}</h3>
                                 <p className={styles.serviceDescription}>{service.description}</p>

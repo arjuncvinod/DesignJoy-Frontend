@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 10000;
     animation: fadeIn 0.3s ease-out;
     backdrop-filter: blur(3px);
 }
@@ -17,7 +17,6 @@
     background-color: #f7e6dc;
     border-radius: 20px;
     padding: 50px 55px 50px 50px;
-    /* Increased padding on right to account for scrollbar */
     width: 90%;
     max-width: 600px;
     position: relative;
@@ -26,12 +25,10 @@
     overflow-y: auto;
     animation: slideUp 0.4s ease-out;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    /* Firefox scrollbar */
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.12) transparent;
 }
 
-/* Custom scrollbar for Webkit browsers */
 .modalContent::-webkit-scrollbar {
     width: 8px;
 }
@@ -39,7 +36,6 @@
 .modalContent::-webkit-scrollbar-track {
     background: transparent;
     margin: 40px 0;
-    /* Creates space at the top and bottom */
     border-radius: 10px;
 }
 
@@ -47,7 +43,6 @@
     background-color: rgba(0, 0, 0, 0.12);
     border-radius: 10px;
     border: 2px solid #f7e6dc;
-    /* Creates padding around the thumb */
 }
 
 .modalContent::-webkit-scrollbar-thumb:hover {
@@ -128,7 +123,6 @@
     font-family: var(--font-base, 'Inter', sans-serif);
 }
 
-/* Input focus and hover effects */
 .formGroup input:hover,
 .formGroup select:hover {
     border-color: rgba(0, 0, 0, 0.2);
@@ -144,14 +138,12 @@
     transform: translateY(-2px);
 }
 
-/* Placeholder styling */
 .formGroup input::placeholder {
     color: #aaa;
     font-size: 0.95rem;
     opacity: 0.7;
 }
 
-/* Required field indicator */
 .formGroup label::after {
     content: "*";
     color: #000;
@@ -198,7 +190,6 @@
     display: none;
 }
 
-/* Selected radio option styling */
 .radioLabel.selected {
     background-color: #000;
     color: white;
@@ -259,7 +250,6 @@
     box-shadow: 4px 4px 0 #b3a393;
 }
 
-/* Decorative Elements */
 .decorElements {
     position: absolute;
     width: 100%;
@@ -306,7 +296,6 @@
     z-index: 0;
 }
 
-/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -329,7 +318,6 @@
     }
 }
 
-/* Media queries for responsive design */
 @media (max-width: 768px) {
     .modalContent {
         padding: 40px 40px 40px 30px;
@@ -367,7 +355,6 @@
         border-radius: 16px;
     }
 
-    /* Hide scrollbar completely on very small screens */
     .modalContent::-webkit-scrollbar {
         width: 4px;
     }
