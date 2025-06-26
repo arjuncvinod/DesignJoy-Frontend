@@ -6,6 +6,11 @@
   --font-cta: 'Exo', Arial, sans-serif;
 }
 
+/* Global smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +20,8 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll */
 }
 
 h1,
@@ -25,4 +32,9 @@ h5,
 h6 {
   font-family: var(--font-heading);
   font-weight: 700;
+}
+
+a:hover{
+  text-decoration: none;
+  color: black;
 }

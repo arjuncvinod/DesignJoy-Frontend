@@ -3,12 +3,12 @@ import styles from '../styles/hero.module.css'
 import heroRightImg from '../assets/Hero/hero-right.svg'
 import heroLogo from '../assets/Hero/logo.svg'
 import Navigation from './Navigation'
-
-const navLinks = ['I', 'Benefits', 'Recent work', 'Scope of work', 'Pricing', 'FAQs', 'Login'];
+import SubscriptionForm from './SubscriptionForm'
 
 const Hero = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 768);
@@ -19,11 +19,14 @@ const Hero = () => {
   const handleHamburgerClick = () => setMobileNavOpen(true);
   const handleCloseNav = () => setMobileNavOpen(false);
 
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
   return (
-    <div className={styles.indexContainer}>
+    <div className={styles.indexContainer} id='hero'>
       {/* Top Branding */}
       <div className={styles.branding}>
-        <img src={heroLogo} alt="DesignJoy logo" className={styles.logo}/>
+        <img src={heroLogo} alt="DesignJoy logo" className={styles.logo} />
         {/* Hamburger menu for mobile */}
         {isMobile && (
           <button
@@ -48,7 +51,7 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className={styles.mainContent}>
+      <div className={styles.mainContent} >
         <h1 className={styles.mainTitle}>
           A design agency with a twist
         </h1>
@@ -57,14 +60,17 @@ const Hero = () => {
           Design subscriptions to scale your business.
         </p>
 
-        <button className={styles.ctaButton}>
-          See plans
+        <button className={styles.ctaButton} onClick={handleOpenModal}>
+          Join Waitlist
         </button>
 
         <p className={styles.guaranteeText}>
           Designs you'll, guaranteed
         </p>
       </div>
+
+      {/* Subscription Form Modal */}
+      <SubscriptionForm isOpen={isModalOpen} onClose={handleCloseModal} />
 
       {/* Desktop Navigation (only show on desktop) */}
       {!isMobile && (
@@ -74,28 +80,14 @@ const Hero = () => {
       )}
 
       {/* Mobile Navigation Bar */}
-      {isMobile && mobileNavOpen && (
-        <nav className={styles.mobileNavBar}>
-          <button
-            className={styles.closeNav}
-            onClick={handleCloseNav}
-            aria-label="Close navigation"
-          >
-            &times;
-          </button>
-          <ul className={styles.mobileNavLinks}>
-            {navLinks.slice(1).map((label) => (
-              <li key={label}>
-                <button
-                  className={styles.mobileNavLink}
-                  onClick={handleCloseNav}
-                >
-                  {label}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </nav>
+      {isMobile && (
+        <Navigation
+          isMobile={true}
+          mobileNavOpen={mobileNavOpen}
+          onMobileToggle={handleHamburgerClick}
+          onMobileClose={handleCloseNav}
+          heroStyles={styles}
+        />
       )}
     </div>
   )

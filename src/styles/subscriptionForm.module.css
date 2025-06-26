@@ -1,0 +1,418 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+    backdrop-filter: blur(3px);
+}
+
+.modalContent {
+    background-color: #f7e6dc;
+    border-radius: 20px;
+    padding: 50px 55px 50px 50px;
+    /* Increased padding on right to account for scrollbar */
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 12px 12px 0 #cfc2b8;
+    max-height: 85vh;
+    overflow-y: auto;
+    animation: slideUp 0.4s ease-out;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    /* Firefox scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.12) transparent;
+}
+
+/* Custom scrollbar for Webkit browsers */
+.modalContent::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modalContent::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 40px 0;
+    /* Creates space at the top and bottom */
+    border-radius: 10px;
+}
+
+.modalContent::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    border: 2px solid #f7e6dc;
+    /* Creates padding around the thumb */
+}
+
+.modalContent::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #222;
+    line-height: 0.8;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.closeButton:hover {
+    transform: rotate(90deg);
+    color: #000;
+}
+
+.modalTitle {
+    margin: 0 0 40px 0;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 3rem;
+    color: #111;
+    text-align: center;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    position: relative;
+    z-index: 2;
+}
+
+.subscriptionForm {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    position: relative;
+    z-index: 2;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #111;
+    font-size: 1.05rem;
+    font-family: var(--font-subheading, Arial, sans-serif);
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="tel"],
+.formGroup input[type="email"],
+.formGroup select {
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: 1rem;
+    width: 100%;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    font-family: var(--font-base, 'Inter', sans-serif);
+}
+
+/* Input focus and hover effects */
+.formGroup input:hover,
+.formGroup select:hover {
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+    border-color: #000;
+    outline: none;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Placeholder styling */
+.formGroup input::placeholder {
+    color: #aaa;
+    font-size: 0.95rem;
+    opacity: 0.7;
+}
+
+/* Required field indicator */
+.formGroup label::after {
+    content: "*";
+    color: #000;
+    margin-left: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    opacity: 0.6;
+}
+
+.radioGroup {
+    display: flex;
+    gap: 30px;
+}
+
+.radioLabel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 12px 24px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.radioLabel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.formGroup .radioLabel::after{
+    content: "";
+
+}
+.radioLabel input {
+    cursor: pointer;
+    accent-color: #000;
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+
+/* Selected radio option styling */
+.radioLabel.selected {
+    background-color: #000;
+    color: white;
+    box-shadow: 6px 6px 0 #cfc2b8;
+    transform: translateY(-3px);
+}
+
+.businessSection {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 32px 28px;
+    border-radius: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    margin-top: 15px;
+    animation: businessAppear 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 6px 6px 0 #cfc2b8;
+}
+
+@keyframes businessAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.submitButton {
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 18px 36px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 8px 8px 0 #cfc2b8;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    align-self: center;
+    min-width: 180px;
+}
+
+.submitButton:hover {
+    box-shadow: 8px 8px 0 #b3a393;
+    transform: translateY(-8px);
+}
+
+.submitButton:active {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0 #b3a393;
+}
+
+/* Decorative Elements */
+.decorElements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+}
+
+.decorCircle {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    top: -40px;
+    right: -40px;
+    z-index: 0;
+}
+
+.decorSquare {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(207, 194, 184, 0.4);
+    bottom: -20px;
+    left: -20px;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.decorTriangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 100px solid rgba(255, 255, 255, 0.3);
+    top: 30%;
+    right: -30px;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .modalContent {
+        padding: 40px 40px 40px 30px;
+        width: 92%;
+        border-radius: 18px;
+        box-shadow: 10px 10px 0 #cfc2b8;
+    }
+
+    .modalTitle {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+
+    .formGroup label {
+        font-size: 1rem;
+    }
+
+    .formGroup input[type="text"],
+    .formGroup input[type="tel"],
+    .formGroup input[type="email"],
+    .formGroup select {
+        padding: 14px 18px;
+    }
+
+    .submitButton {
+        padding: 16px 32px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .modalContent {
+        padding: 32px 32px 32px 24px;
+        width: 95%;
+        border-radius: 16px;
+    }
+
+    /* Hide scrollbar completely on very small screens */
+    .modalContent::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .modalContent::-webkit-scrollbar-track {
+        margin: 32px 0;
+    }
+
+    .modalTitle {
+        font-size: 2rem;
+        margin-bottom: 24px;
+    }
+
+    .formGroup input[type="text"],
+    .formGroup input[type="tel"],
+    .formGroup input[type="email"],
+    .formGroup select {
+        padding: 12px 16px;
+    }
+
+    .radioGroup {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .radioLabel {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 20px;
+    }
+
+    .businessSection {
+        padding: 24px 20px;
+        gap: 20px;
+    }
+
+    .submitButton {
+        padding: 14px 28px;
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    .closeButton {
+        top: 15px;
+        right: 15px;
+        font-size: 28px;
+    }
+}

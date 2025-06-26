@@ -46,7 +46,7 @@ const benefits = [
 ];
 
 const MembershipBenefits = () => (
-    <section className={styles.benefitsSection}>
+    <section className={styles.benefitsSection} id='benefits'>
         <img src={decorTopLeft} alt="" className={styles.decorTopLeft} />
         <img src={decorTopRight} alt="" className={styles.decorTopRight} />
         <img src={decorTopCenter} alt="" className={styles.decorCenter} />

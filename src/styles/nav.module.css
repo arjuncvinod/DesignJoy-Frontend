@@ -1,85 +1,111 @@
+/* Add smooth scroll behavior globally */
+html {
+  scroll-behavior: smooth;
+}
+
 .navigationContainer {
-    position: fixed;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 20;
-  }
-  
-  .navigation {
-    background-color: black;
-    border-radius: 9999px;
-    padding: .75em 1rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  }
-  
-  .navList {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: .5rem;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    color: #fff;
-  }
-  
-  .navItem {
-    margin: 0;
-  }
-  
-  .navItem:first-child .navButton {
-    background-color: rgba(255, 255, 255, 0.314);
-    color: rgb(255, 255, 255);
-    font-weight: 900;
-    border: 50%;
-    width: 50px;
-    height: 50px;
-  }
-  
-  .navItem:first-child .navButton.active {
-    background-color: rgba(255, 255, 255, 0.314);
-    color: rgb(255, 255, 255);
-  }
-  
-  .navItem:last-child .navButton {
-    background-color:rgba(255, 255, 255, 0.314);
-    color: white;
-    font-weight: 700;
-    padding: 1rem 1.3rem;
-  }
-  
-  .navItem:last-child .navButton.active {
-    background-color: rgba(255, 255, 255, 0.314);
-    color: white;
-  }
-  
-  .navButton {
-    font-family: var(--font-heading);
-    font-size: 0.875rem;
-    font-weight: 800;
-    transition: all 0.2s;
-    padding: 1rem 1.3rem;
-    border-radius: 9999px;
-    border: none;
-    cursor: pointer;
-    background: none;
-  }
-  
-  .active {
-    background-color: white;
-    color: black;
-  }
-  
-  .inactive {
-    color: #D1D5DB;
-  }
-  
-  .inactive:hover {
-    color: white;
-    background-color: #1F2937;
-  }
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.navigation {
+  background-color: black;
+  border-radius: 9999px;
+  padding: .75em 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.navigation:hover {
+  box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: .5rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.navItem {
+  margin: 0;
+}
+
+.navItem:first-child .navButton {
+  background-color: rgba(255, 255, 255, 0.314);
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  border: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.navItem:first-child .navButton.active {
+  background-color: rgba(255, 255, 255, 0.314);
+  color: rgb(255, 255, 255);
+}
+
+.navItem:last-child .navButton {
+  background-color: rgba(255, 255, 255, 0.314);
+  color: white;
+  font-weight: 700;
+  padding: 1rem 1.3rem;
+}
+
+.navItem:last-child .navButton.active {
+  background-color: rgba(255, 255, 255, 0.314);
+  color: white;
+}
+
+.navButton {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 800;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1rem 1.3rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  transform: translateY(0);
+}
+
+
+.navButton:hover {
+  transform: translateY(-2px);
+}
+
+.navButton:focus {
+  outline: none;
+}
+
+.active {
+  background-color: white;
+  color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.inactive {
+  color: #D1D5DB;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inactive:hover {
+  color: white;
+  background-color: #1F2937;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
 .mobileNav {
   width: 100vw;
@@ -107,4 +133,11 @@
   border-radius: 9999px;
   width: 100%;
   max-width: 320px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+}
+
+.mobileNavList .navButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }

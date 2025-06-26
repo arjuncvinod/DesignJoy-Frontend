@@ -55,7 +55,7 @@ const FAQSection = () => {
     };
 
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id='faq'>
             <h2 className={styles.heading}>FAQ</h2>
             <div className={styles.faqList}>
                 {faqs.map((faq, idx) => (

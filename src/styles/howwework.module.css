@@ -124,8 +124,9 @@
 }
 
 .image img {
-    max-width: 80%;
-    height: auto;
+    max-height: 20rem;
+    max-width: 60%;
+    width: auto;
     border-radius: 16px;
     transition: all 0.3s ease;
     animation: float-up-down 1.8s ease-in-out infinite;

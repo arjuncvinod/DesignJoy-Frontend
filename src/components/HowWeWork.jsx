@@ -1,9 +1,9 @@
 import React from 'react';
 
-import img1 from "../assets/HowWeWork/1.jpeg"
-import img2 from "../assets/HowWeWork/2.jpeg"
-import img3 from "../assets/HowWeWork/3.jpeg"
-import img4 from "../assets/HowWeWork/4.jpeg"
+import img1 from "../assets/HowWeWork/1-new.png"
+import img2 from "../assets/HowWeWork/2-new.png"
+import img3 from "../assets/HowWeWork/3-new.png"
+import img4 from "../assets/HowWeWork/4-new.png"
 
 import styles from "../styles/howwework.module.css"
 
@@ -45,7 +45,7 @@ const HowWeWork = () => {
   ];
 
   return (
-    <section className={`section ${styles.section} ${styles.sectionPadding}`}>
+    <section className={`section ${styles.section} ${styles.sectionPadding}`} id='howwework'>
     <div className="container">
       <div className={`${styles.sectionTitle} ${styles.sectionTitleCenter}`}>
         <h2>How We Work</h2>

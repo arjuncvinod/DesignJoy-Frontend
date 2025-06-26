@@ -21,7 +21,7 @@ const features = [
 ];
 
 const FeatureBanner = () => (
-    <section className={styles.banner}>
+    <section className={styles.banner} id='features'>
         <h1 className={styles.heading}>
             We didn't reinvent the wheel, just design
         </h1>
