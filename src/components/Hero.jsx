@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from '../styles/hero.module.css'
 import heroRightImg from '../assets/Hero/hero-right.svg'
-import heroLogo from '../assets/Hero/logo.svg'
+import heroLogo from '../assets/Hero/logo.png'
 import Navigation from './Navigation'
 import SubscriptionForm from './SubscriptionForm'
 
@@ -47,7 +47,7 @@ const Hero = () => {
 
       <div className={styles.mainContent} >
         <h1 className={styles.mainTitle}>
-          A design agency with a twist
+          Unlimited <span style={{color:'#ff6638'}}>Creative Design.</span> One Simple Subscription.
         </h1>
 
         <p className={styles.mainSubtitle}>

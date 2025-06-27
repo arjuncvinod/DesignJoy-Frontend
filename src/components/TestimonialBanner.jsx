@@ -11,7 +11,7 @@ const TestimonialBanner = () => (
         <div className={styles.banner}>
             <img src={quoteImg} alt="quote" className={styles.quoteIcon} />
             <div className={styles.text}>
-                Designjoy shows that they know the art of subtlety.
+                Designvault shows that they know the art of subtlety.
             </div>
             <img src={webflowLogo} alt="webflow logo" className={styles.author} />
             <img src={decoLeft} alt="decorative left" className={styles.decoLeft} />

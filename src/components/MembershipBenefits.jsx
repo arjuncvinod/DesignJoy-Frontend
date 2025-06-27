@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/membershipBenefits.module.css';
 import decorTopLeft from '../assets/Membership/top-left.svg';
 import decorTopRight from '../assets/Membership/top-right.svg';
 import decorTopCenter from '../assets/Membership/top-center.svg';
 import sparkle from '../assets/Membership/sparkle.svg';
+import SubscriptionForm from './SubscriptionForm';
 
 import icon1 from "../assets/Membership/1.png"
 import icon2 from "../assets/Membership/2.png"
@@ -45,27 +46,35 @@ const benefits = [
     }
 ];
 
-const MembershipBenefits = () => (
-    <section className={styles.benefitsSection} id='benefits'>
-        <img src={decorTopLeft} alt="" className={styles.decorTopLeft} />
-        <img src={decorTopRight} alt="" className={styles.decorTopRight} />
-        <img src={decorTopCenter} alt="" className={styles.decorCenter} />
-        <img src={sparkle} alt="" className={styles.sparkle} />
-        <div className={styles.content}>
-            <h1 className={styles.heading}>Membership benefits</h1>
-            <p className={styles.subtitle}>Perks so good you'll never need to go anywhere else for your design. Seriously.</p>
-            <button className={styles.ctaButton}>See plans</button>
-            <div className={styles.benefitsGrid}>
-                {benefits.map((b, i) => (
-                    <div className={styles.benefitItem} key={i}>
-                        <div className={styles.icon}><img src={b.icon} alt="" /></div>
-                        <div className={styles.benefitTitle}>{b.title}</div>
-                        <div className={styles.benefitDesc}>{b.desc}</div>
-                    </div>
-                ))}
+const MembershipBenefits = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleOpenModal = () => setIsModalOpen(true);
+    const handleCloseModal = () => setIsModalOpen(false);
+
+    return (
+        <section className={styles.benefitsSection} id='benefits'>
+            <img src={decorTopLeft} alt="" className={styles.decorTopLeft} />
+            <img src={decorTopRight} alt="" className={styles.decorTopRight} />
+            <img src={decorTopCenter} alt="" className={styles.decorCenter} />
+            <img src={sparkle} alt="" className={styles.sparkle} />
+            <div className={styles.content}>
+                <h1 className={styles.heading}>Membership benefits</h1>
+                <p className={styles.subtitle}>Perks so good you'll never need to go anywhere else for your design. Seriously.</p>
+                <button className={styles.ctaButton} onClick={handleOpenModal}>Join Waitlist</button>
+                <div className={styles.benefitsGrid}>
+                    {benefits.map((b, i) => (
+                        <div className={styles.benefitItem} key={i}>
+                            <div className={styles.icon}><img src={b.icon} alt="" /></div>
+                            <div className={styles.benefitTitle}>{b.title}</div>
+                            <div className={styles.benefitDesc}>{b.desc}</div>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
-    </section>
-);
+            <SubscriptionForm isOpen={isModalOpen} onClose={handleCloseModal} />
+        </section>
+    );
+};
 
 export default MembershipBenefits; 

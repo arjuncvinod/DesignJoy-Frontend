@@ -23,10 +23,10 @@ const features = [
 const FeatureBanner = () => (
     <section className={styles.banner} id='features'>
         <h1 className={styles.heading}>
-            We didn't reinvent the wheel, just design
+            Your All-in-One Creative Sidekick
         </h1>
         <p className={styles.subtitle}>
-            Design as you know it is out the door. Design as you want it just arrived.
+            Designs Vault: The magic lamp your brand’s been waiting for.
         </p>
         <div className={styles.features}>
             {features.map((feature, idx) => (

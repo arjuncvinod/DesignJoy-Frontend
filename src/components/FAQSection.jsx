@@ -3,33 +3,24 @@ import styles from '../styles/faqSection.module.css';
 
 const faqs = [
     {
-        question: "Why wouldn't I just hire a full-time designer?",
-        answer: (
-            <>
-                <p>Good question! For starters, the annual cost of a full-time senior-level designer now exceeds $100,000, plus benefits (and good luck finding one available). Aside from that, you may not always have enough work to keep them busy at all times, so you're stuck paying for time you aren't able to utilize.</p>
-                <p>With the monthly plan, you can pause and resume your subscription as often as you need to ensure you're only paying your designer when you have work available for them.</p>
-            </>
-        ),
+        question: "How do I subscribe to Designvault?",
+        answer: <p>Easy peasy! Just click the ‘Subscribe’ button, choose your plan, and you’re all set. Welcome to the Designvault family!</p>,
     },
     {
-        question: "What is a project?",
-        answer: <p>A project is a website that you build in Webflow. You can publish projects to a webflow.io staging subdomain for free, export the code on a paid plan, or add a site plan to connect your custom domain and unlock hosting features.</p>,
+        question: "How do I request a design?",
+        answer: <p>Simply log in to your account, hit ‘Request Design’, and tell us what you need. We’ll take it from there!</p>,
     },
     {
-        question: "What can I white label?",
-        answer: <p>Pro accounts can add their own logo to Client Billing forms and the Editor. Pro accounts can also remove references to Webflow in the source code and form submission emails, and hide the Webflow badge from their staging sites.</p>,
+        question: "What if I need revisions?",
+        answer: <p>No worries! We offer unlimited revisions. Just let us know what tweaks you need, and we’ll make it perfect.</p>,
     },
     {
-        question: "How much traffic can the hosting handle?",
-        answer: <p>Webflow hosting scales automatically to handle millions of concurrent visits. All site plans serve sites through our Amazon's Cloudfront CDN and accelerated using Fastly, loading sites in milliseconds.</p>,
+        question: "How fast can I get my design?",
+        answer: <p>Fast! We deliver most designs within 2 days. Speedy service without sacrificing quality—that’s our promise.</p>,
     },
     {
-        question: "What kind of support does Webflow provide?",
-        answer: <p>We offer fast email support to paid accounts and prioritized help for team accounts. Community support (forum.webflow.com) is available to free accounts.</p>,
-    },
-    {
-        question: "How long does it take to learn Webflow?",
-        answer: <p>If you're new to building websites, our video tutorials will get up and running quickly. If you already know concepts behind CSS and the box model, you will feel at home in Webflow.</p>,
+        question: "Can I cancel my subscription anytime?",
+        answer: <p>Absolutely. No strings attached! You can cancel anytime if you decide Designvault isn’t the right fit for you (but we think you’ll love it!).</p>,
     },
 ];
 

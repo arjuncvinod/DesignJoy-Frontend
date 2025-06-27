@@ -124,8 +124,8 @@
 }
 
 .image img {
-    max-height: 20rem;
-    max-width: 60%;
+    max-height: 30rem;
+    max-width: 70%;
     width: auto;
     border-radius: 16px;
     transition: all 0.3s ease;

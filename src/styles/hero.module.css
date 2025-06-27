@@ -4,10 +4,12 @@
   position: relative;
   overflow: hidden;
 }
-.logo{
-  height: 1.5rem;
+
+.logo {
+  height: 3rem;
   margin: 0 auto;
 }
+
 .branding {
   text-align: center;
   padding-top: 3rem;
@@ -129,13 +131,14 @@
 
 .mainTitle {
   font-family: var(--font-heading);
-  font-size: 5rem;
+  font-size: 75px;
   font-weight: bold;
-  color: black;
-  line-height: 90px;
-  max-width: 800px;
+  color: rgb(0, 0, 0);
+  line-height: 1.04em;
+  max-width: 1000px;
   margin: 0 auto 2rem auto;
-  padding: 0 1rem;
+  padding: 0rem;
+  letter-spacing: -2px;
 }
 
 .mainSubtitle {
@@ -190,9 +193,12 @@
   .indexContainer {
     min-height: 50vh;
   }
-.logo{
-  margin: unset;
-}
+
+  .logo {
+    margin: unset;
+    height: 2rem;
+  }
+
   .yellowShapes,
   .blackCircle,
   .diamond,

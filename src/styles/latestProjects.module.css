@@ -1,15 +1,22 @@
 .latestProjects {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 1%;
+    flex-direction: column;
     background-color: #f7e6dc;
-    overflow-x: hidden;
-    padding-top: 5rem;
+    overflow: hidden;
+    padding-top: 3rem;
     padding-bottom: 6rem;
     position: relative;
+    overflow-y: visible;
+
 }
 
-.latestProjects .badge{
+.marqueeContainer {
+    width: 100%;
+    overflow-y: visible;
+    padding: 2rem 0;
+}
+
+.latestProjects .badge {
     position: absolute;
     top: 0;
     left: 11rem;
@@ -18,27 +25,32 @@
 }
 
 .latestProjects .lpImg {
-    width: 25%;
-    transition: .5s;
-    
+    height: 450px;
+    width: auto;
+    margin-right: .5rem;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .latestProjects .lpImg:hover {
-    scale: 1.1;
+    transform: scale(1.05);
 }
 
 
 @media (max-width: 768px) {
-    .latestProjects{
+    .latestProjects {
         padding-top: 5rem;
     }
+
     .latestProjects .lpImg {
-        width: 60%;
-    }
-    .latestProjects .badge{
-        width: 90px;
-        left: 30px;
-        top: 30px;
+        height: 350px;
+        margin-right: 1.5rem;
     }
 
+    .latestProjects .badge {
+        width: 90px;
+        left: 30px;
+        top: 50px;
+    }
 }

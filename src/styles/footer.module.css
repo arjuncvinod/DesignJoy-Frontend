@@ -61,9 +61,9 @@
 }
 
 .footer__logo {
-    height: 2rem;
+    height: 3rem;
     width: auto;
-    filter: invert(1);
+    /* filter: invert(1); */
 
 }
 
