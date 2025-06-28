@@ -22,9 +22,15 @@
 }
 
 @media (max-width: 768px) {
+    .marqueeContainer{
+        padding: 30px 0;
+    }
     .marqueeImage {
         height: 20px;
         margin: 0 15px;
+    }
+    .marqueeText{
+        font-size: 2rem;
     }
 
 }

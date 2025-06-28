@@ -54,17 +54,25 @@ const MembershipBenefits = () => {
 
     return (
         <section className={styles.benefitsSection} id='benefits'>
-            <img src={decorTopLeft} alt="" className={styles.decorTopLeft} />
-            <img src={decorTopRight} alt="" className={styles.decorTopRight} />
-            <img src={decorTopCenter} alt="" className={styles.decorCenter} />
-            <img src={sparkle} alt="" className={styles.sparkle} />
+            <img src={decorTopLeft} alt="" className={styles.decorTopLeft} data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="300" />
+            <img src={decorTopRight} alt="" className={styles.decorTopRight} data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="300" />
+            <img src={decorTopCenter} alt="" className={styles.decorCenter} data-aos="fade-down" data-aos-duration="800" data-aos-delay="150" />
+            <img src={sparkle} alt="" className={styles.sparkle} data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="400" />
             <div className={styles.content}>
-                <h1 className={styles.heading}>Membership benefits</h1>
-                <p className={styles.subtitle}>Perks so good you'll never need to go anywhere else for your design. Seriously.</p>
-                <button className={styles.ctaButton} onClick={handleOpenModal}>Join Waitlist</button>
+                <h1 className={styles.heading} data-aos="fade-up" data-aos-duration="1200" data-aos-offset="100" data-aos-delay="200">Membership benefits</h1>
+                <p className={styles.subtitle} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="100">Perks so good you'll never need to go anywhere else for your design. Seriously.</p>
+                <button className={styles.ctaButton} onClick={handleOpenModal} data-aos="fade-up" data-aos-duration="600" data-aos-delay="200" data-aos-offset="50">Join Waitlist</button>
                 <div className={styles.benefitsGrid}>
                     {benefits.map((b, i) => (
-                        <div className={styles.benefitItem} key={i}>
+                        <div
+                            className={styles.benefitItem}
+                            key={i}
+                            data-aos="fade-up"
+                            data-aos-duration="600"
+                            data-aos-delay={300 + (i * 100)}
+                            data-aos-offset="30"
+                            data-aos-anchor-placement="top-bottom"
+                        >
                             <div className={styles.icon}><img src={b.icon} alt="" /></div>
                             <div className={styles.benefitTitle}>{b.title}</div>
                             <div className={styles.benefitDesc}>{b.desc}</div>

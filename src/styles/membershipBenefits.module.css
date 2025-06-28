@@ -3,7 +3,7 @@
     position: relative;
     padding: 0 0 4rem 0;
     min-height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding-top: 9rem;
     overflow: visible;
 }
@@ -27,7 +27,7 @@
 .decorCenter {
     position: absolute;
     top: -5rem;
-    left: 50%;
+    left: 49%;
     transform: translateX(-50%);
     z-index: 2;
 }
@@ -35,7 +35,7 @@
 .sparkle {
     position: absolute;
     top: 6rem;
-    left: 50%;
+    left: 47%;
     transform: translateX(-50%);
     width: 90px;
     z-index: 3;

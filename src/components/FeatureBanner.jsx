@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import styles from '../styles/featureBanner.module.css';
 
 import icon1 from '../assets/Features/1.png';
@@ -22,15 +22,21 @@ const features = [
 
 const FeatureBanner = () => (
     <section className={styles.banner} id='features'>
-        <h1 className={styles.heading}>
+        <h1 className={styles.heading} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             Your All-in-One Creative Sidekick
         </h1>
-        <p className={styles.subtitle}>
-            Designs Vault: The magic lamp your brand’s been waiting for.
+        <p className={styles.subtitle} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            Designs Vault: The magic lamp your brand's been waiting for.
         </p>
         <div className={styles.features}>
             {features.map((feature, idx) => (
-                <div className={styles.feature} key={idx}>
+                <div
+                    className={styles.feature}
+                    key={idx}
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                    data-aos-delay={300 + (idx * 100)}
+                >
                     <div className={styles.icon}>{feature.icon}</div>
                     <div className={styles.text}>{feature.text}</div>
                 </div>
@@ -39,4 +45,4 @@ const FeatureBanner = () => (
     </section>
 );
 
-export default FeatureBanner; 
+export default FeatureBanner;

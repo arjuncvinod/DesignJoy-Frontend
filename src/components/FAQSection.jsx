@@ -47,10 +47,18 @@ const FAQSection = () => {
 
     return (
         <section className={styles.section} id='faq'>
-            <h2 className={styles.heading}>FAQ</h2>
-            <div className={styles.faqList}>
+            <h2 className={styles.heading} data-aos="fade-up" data-aos-duration="800" data-aos-offset="20" data-aos-delay="200">FAQ</h2>
+            <div className={styles.faqList} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="20">
                 {faqs.map((faq, idx) => (
-                    <div key={idx} className={styles.faqItem}>
+                    <div
+                        key={idx}
+                        className={styles.faqItem}
+                        data-aos="fade-up"
+                        data-aos-duration="600"
+                        data-aos-delay={300 + (idx * 100)}
+                        data-aos-offset="20"
+                        data-aos-anchor-placement="top-bottom"
+                    >
                         <button
                             className={styles.question}
                             onClick={() => handleToggle(idx)}

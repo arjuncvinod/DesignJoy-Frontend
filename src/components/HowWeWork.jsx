@@ -46,31 +46,41 @@ const HowWeWork = () => {
 
   return (
     <section className={`section ${styles.section} ${styles.sectionPadding}`} id='howwework'>
-    <div className="container">
-      <div className={`${styles.sectionTitle} ${styles.sectionTitleCenter}`}>
-        <h2>How We Work</h2>
-        <p>Hiring a design team has never been easier!</p>
-      </div>
-      <div className={styles.steps}>
-        {steps.map((step, index) => (
-          <div key={index} className="row align-items-center mb-5">
-            <div className={`col-lg-6 ${step.imageOnRight ? 'order-lg-1' : 'order-lg-2'}`}>
-              <div className={styles.content}>
-                <div className={styles.stepNumber}>{step.number}</div>
-                <h3>{step.title}</h3>
-                <p>{step.description}</p>
+      <div className="container">
+        <div className={`${styles.sectionTitle} ${styles.sectionTitleCenter}`} data-aos="fade-up" data-aos-duration="1000">
+          <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="50" data-aos-delay="200">How We Work</h2>
+          <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="50" data-aos-delay="200">Hiring a design team has never been easier!</p>
+        </div>
+        <div className={styles.steps}>
+          {steps.map((step, index) => (
+            <div key={index} className="row align-items-center mb-5">
+              <div
+                className={`col-lg-6 ${step.imageOnRight ? 'order-lg-1' : 'order-lg-2'}`}
+                data-aos={step.imageOnRight ? "fade-right" : "fade-left"}
+                data-aos-duration="1000"
+                data-aos-delay={200 + (index * 100)}
+              >
+                <div className={styles.content}>
+                  <div className={styles.stepNumber}>{step.number}</div>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+                </div>
+              </div>
+              <div
+                className={`col-lg-6 ${step.imageOnRight ? 'order-lg-2' : 'order-lg-1'}`}
+                data-aos={step.imageOnRight ? "fade-left" : "fade-right"}
+                data-aos-duration="1000"
+                data-aos-delay={300 + (index * 100)}
+              >
+                <div className={styles.image}>
+                  <img src={step.image} alt={step.alt} className="img-fluid" />
+                </div>
               </div>
             </div>
-            <div className={`col-lg-6 ${step.imageOnRight ? 'order-lg-2' : 'order-lg-1'}`}>
-              <div className={styles.image}>
-                <img src={step.image} alt={step.alt} className="img-fluid" />
-              </div>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   );
 };
 

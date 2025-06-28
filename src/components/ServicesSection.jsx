@@ -129,11 +129,11 @@ const ServicesSection = () => {
 
     return (
         <section className={styles.section} id='services'>
-            <div className={styles.header}>
-                <h2 className={styles.title}>Services</h2>
-                <p className={styles.subtitle}>Everything you need to scale your brand, all in one place.</p>
+            <div className={styles.header} data-aos="fade-up" data-aos-duration="1000" data-aos-offset="50" data-aos-delay="200">
+                <h2 className={styles.title} data-aos="fade-up" data-aos-duration="1000" data-aos-offset="50" data-aos-delay="200">Services</h2>
+                <p className={styles.subtitle} data-aos="fade-up" data-aos-duration="1000" data-aos-offset="50" data-aos-delay="200">Everything you need to scale your brand, all in one place.</p>
             </div>
-            <div className={styles.carouselContainer}>
+            <div className={styles.carouselContainer} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="30">
                 {showLeftArrow && (
                     <button className={styles.navButton} onClick={scrollLeft}>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -141,12 +141,17 @@ const ServicesSection = () => {
                         </svg>
                     </button>
                 )}
-                <div className={styles.cards} ref={carouselRef}>
-                    {services.map((service) => (
+                <div className={styles.cards} ref={carouselRef} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="30">
+                    {services.map((service, index) => (
                         <div
                             key={service.id}
                             className={styles.serviceCard}
                             style={{ backgroundImage: `url(${service.bgImage})` }}
+                            data-aos="fade-in"
+                            data-aos-duration="600"
+                            data-aos-delay={300 + (index * 200)}
+                            data-aos-offset="20"
+                            data-aos-anchor-placement="center-bottom"
                         >
                             <div className={styles.idleContent}>
                                 <h3 className={styles.serviceTitle}>{service.title}</h3>
