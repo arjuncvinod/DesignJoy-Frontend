@@ -16,7 +16,7 @@ const App = () => {
       <LatestProjects />
       <InfiniteMarquee />
       <FeatureBanner />
-      <TestimonialBanner />
+      {/* <TestimonialBanner /> */}
       <HowWeWork />
       <MembershipBenefits />
       <ServicesSection />

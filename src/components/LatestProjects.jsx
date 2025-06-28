@@ -6,7 +6,9 @@ import LP1 from "../assets/LatestProjects/lp-1.jpg"
 import LP2 from "../assets/LatestProjects/lp-2.jpg"
 import LP3 from "../assets/LatestProjects/lp-3.jpg"
 import LP4 from "../assets/LatestProjects/lp-4.jpg"
-import LP5 from "../assets/LatestProjects/lp-5.jpg"
+import LP5 from "../assets/LatestProjects/project-img.avif"
+
+
 import badge from "../assets/LatestProjects/badge.svg"
 
 function LatestProjects() {
@@ -24,7 +26,8 @@ function LatestProjects() {
         {projects.map((project, index) => (
           <img
             key={index}
-            src={project}
+            // src={project}
+            src={LP5}
             alt={`Latest project ${index + 1}`}
             className={styles.lpImg}
           />
