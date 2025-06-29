@@ -121,6 +121,7 @@
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     font-family: var(--font-base, 'Inter', sans-serif);
+    color: black;
 }
 
 .formGroup input:hover,
